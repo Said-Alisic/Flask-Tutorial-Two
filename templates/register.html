@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    {% extends "layout.html" %}
+    <div class="jumbotron text-center">
+        {% block body %}
+        <h1>Register</h1>
+
+        <form method="POST" action="">
+            <div class="form-group">
+                {{form.name}}
+            </div>
+            <div class="form-group">
+                {{form.email}}
+            </div>
+            <div class="form-group">
+                {{form.username}}
+            </div>
+            <div class="form-group">
+                {{form.password}}
+            </div>
+            <div class="form-group">
+                {{form.confirm}}
+            </div>
+            <p><input type="submit" class="btn btn-primary" value="Submit"/></p>
+        </form>
+        {% endblock %}
+    </div>
+
+</body>
+</html>
