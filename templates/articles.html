@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    {% extends "layout.html" %}
+    <div class="jumbotron text-center">
+        {% block body %}
+        <h1>Articles</h1>
+        <ul class="list-group">
+            {% for article in articles %}
+                <li class="list-group-item"><a href="article/{{article.id}}">{{article.title}}</a> </li>
+            {% endfor %}
+        </ul>
+        {% endblock %}
+    </div>
 </body>
 </html>

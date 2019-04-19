@@ -5,6 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-
+    {% extends "layout.html" %}
+    <div class="jumbotron text-center">
+        {% block body %}
+        <h1>{{id}}</h1>
+        {% endblock %}
+    </div>
 </body>
 </html>
