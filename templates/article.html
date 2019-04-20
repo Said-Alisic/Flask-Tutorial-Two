@@ -8,7 +8,12 @@
     {% extends "layout.html" %}
     <div class="jumbotron text-center">
         {% block body %}
-        <h1>{{id}}</h1>
+        <h1>{{article.title}}</h1>
+        <small>Written by {{article.author}} on {{article.create_date}}</small>
+        <hr>
+        <div>
+            <p>{{article.body | safe }}</p>
+        </div>
         {% endblock %}
     </div>
 </body>
